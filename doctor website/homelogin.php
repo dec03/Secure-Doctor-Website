@@ -1,10 +1,8 @@
 <?php
 	$servername = "localhost";
-	// Replace the following with your own information
-	$username = "M00842543Danie";
-	$password = "I-play-pian0";
-	$dbname = "M00842543Danie";
-	
+	$username = "";
+	$password = "";
+	$dbname = "";
 	// Create connection
 	$conn = new mysqli($servername, $username, $password, $dbname);
 	// Check connection
@@ -33,15 +31,6 @@
 		list($encrypted_data, $iv) = array_pad(explode('::', base64_decode($data),2),2,null);
 		return openssl_decrypt($encrypted_data, 'aes-256-cbc',$encryption_key,0,$iv);
 	}
-
-
-	/*
-	$str = "Moreno";
-	$temp = encryptstring($str, $key);
-	echo $temp;
-	$temp = decryptstring($temp, $key);
-	echo $temp;
-	*/
 //--------------------------------------------------------------------------------------------------------------------------------------
 	//if username and password fields have values, check each row of database
 	if(isset($username_form, $password_form)){
