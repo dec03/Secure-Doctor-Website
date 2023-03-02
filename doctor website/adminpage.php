@@ -361,14 +361,13 @@ border: 1px solid black;
 		<div class="content">
 			<?php
 			$servername = "localhost";
-			$username = "M00842543Danie";
-			$password = "I-play-pian0";
-			$dbname = "M00842543Danie";
+			$username = "";
+			$password = "";
+			$dbname = "";
 			$conn = new mysqli($servername, $username, $password, $dbname);
 			if($conn->connect_error){
 				die("Connection Failed: " . $conn->connect_error);
 			}
-
 
 			//RETREIVE TABLES
 			//patient table
